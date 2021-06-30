@@ -1,2 +1,1 @@
-# Strive-Blog-FE
- Frontend for Strive Blog
+# Strive Blog Template
