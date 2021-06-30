@@ -13,7 +13,9 @@ export default class NewBlogPost extends Component {
   handleChange(value) {
     this.setState({ text: value });
   }
-
+  // addBlog(){
+  //   let response = fetch()
+  // }
   render() {
     return (
       <Container className="new-blog-container">
