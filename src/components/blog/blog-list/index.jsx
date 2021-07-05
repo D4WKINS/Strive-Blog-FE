@@ -6,21 +6,21 @@ import { withRouter } from "react-router-dom";
  class BlogList extends Component {
 
   
-  state ={
+  state = {
     posts:[]
   }
 
-  // port(){
-  //   let endpoint=""
-  //   "http://localhost:3001/blogs" || "https://carls-blog-fe.herokuapp.com/"
-  // }
   
 
   async fetchPosts(){
+  
+
+
     try{
-    let response = await fetch("https://carls-blog-fe.herokuapp.com/blogs")
+    let response = await fetch("http://localhost:3001/blogs")
     if(response.ok){
     let allPosts = await response.json()
+    console.log(allPosts)
     this.setState({posts:allPosts})
     console.log(this.state.posts)
 
@@ -30,9 +30,9 @@ import { withRouter } from "react-router-dom";
   }
   }
    componentDidMount=()=>{
-      // this.fetchPosts()
-      console.log(this.props)
+      this.fetchPosts()
    }
+  
 
   render() {
     return (
